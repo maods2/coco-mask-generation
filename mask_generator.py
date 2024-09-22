@@ -53,7 +53,7 @@ def create_binary_mask(coco_data: Dict[str, Any], image_path:str, image_id: int)
 
     # Save the binary mask as a PNG file (grayscale)
     mask_image = Image.fromarray(binary_mask * 255)  # Convert mask from 0/1 to 0/255
-    mask_image.save(f"{image_path}_binary_mask.png")
+    mask_image.save(f"{image_path}_binary_mask.png".replace(".jpg", ""))
 
     plt.figure(figsize=(10, 5))
 
